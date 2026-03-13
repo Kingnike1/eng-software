@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minhas atividades</title>
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         header {
             display: flex;
             justify-content: space-between;
@@ -22,6 +25,49 @@
         nav a {
             text-decoration: none;
             color: black;
+        }
+
+        section{
+            height: 100vh;
+            /* width: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #msg{
+            background-color: aqua;
+            width: 80%;
+            display: flex;
+            padding: 20px;
+            margin-top: -300px;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sobre2{
+            background-color: rgb(228, 132, 132);
+            display:flex;
+            flex-direction: row-reverse;
+
+        }
+        #sobre-mim{
+            padding-right: 20px;
+            text-align: justify;
+            word-break: break-all;
+        }
+        #card-img{
+            display: block;
+            width: 320px;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px;
+        }
+        #card-img img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -48,14 +94,19 @@
 
     <section id="sobre">
         <h2>Sobre mim</h2>
-        <div id="sobre-mim">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima tempore velit aliquid quae architecto
-                blanditiis autem eum eaque officia, commodi iste distinctio ratione. Amet qui quas veritatis molestiae.
-                Autem
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis facilis optio, ducimus,
-                beatae cumque natus suscipit harum, quae debitis ex nobis assumenda obcaecati? Sint nulla ducimus
-                repellendus voluptatibus adipisci?
-            </p>
+        <div id="sobre2" >
+            <div id="card-img">
+                <img src="./c3uhsgo1vx541.jpg" alt="">
+            </div>
+            <div id="sobre-mim">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima tempore velit aliquid quae architecto
+                    blanditiis autem eum eaque officia, commodi iste distinctio ratione. Amet qui quas veritatis molestiae.
+                    Autem
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis facilis optio, ducimus,
+                    beatae cumque natus suscipit harum, quae debitis ex nobis assumenda obcaecati? Sint nulla ducimus
+                    repellendus voluptatibus adipisci?
+                </p>
+            </div>
         </div>
     </section><br>
 
@@ -79,9 +130,9 @@
     <section id="contato">
         <div>
             <form action="" method="get">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input type="text"><br>
+                <input type="text"><br>
+                <input type="text"><br>
             </form>
         </div>
     </section>
