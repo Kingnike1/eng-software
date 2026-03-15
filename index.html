@@ -1,152 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas atividades</title>
-    <style>
-        html{
-            scroll-behavior: smooth;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            border: black 2px solid;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-        }
+<title>Pablo | Portfólio</title>
 
-        nav a {
-            text-decoration: none;
-            color: black;
-        }
+<style>
 
-        section{
-            height: 100vh;
-            /* width: 100vh; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-        #msg{
-            background-color: aqua;
-            width: 80%;
-            display: flex;
-            padding: 20px;
-            margin-top: -300px;
-            font-size: large;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        #sobre2{
-            background-color: rgb(228, 132, 132);
-            display:flex;
-            flex-direction: row-reverse;
+html{
+scroll-behavior:smooth;
+}
 
-        }
-        #sobre-mim{
-            padding-right: 20px;
-            text-align: justify;
-            word-break: break-all;
-        }
-        #card-img{
-            display: block;
-            width: 320px;
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px;
-        }
-        #card-img img{
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
+body{
+background:#f5f5f5;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#0077ff;
+}
+
+/* HERO */
+
+#hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+#hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+#hero p{
+max-width:600px;
+font-size:18px;
+line-height:1.6;
+}
+
+/* SEÇÕES */
+
+section{
+padding:80px 10%;
+}
+
+h2{
+margin-bottom:30px;
+font-size:32px;
+}
+
+/* SOBRE */
+
+.sobre-container{
+display:flex;
+gap:40px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.card-img{
+width:320px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card-img img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.sobre-texto{
+flex:1;
+line-height:1.7;
+font-size:17px;
+}
+
+/* PESQUISAS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card a{
+text-decoration:none;
+color:#0077ff;
+font-weight:bold;
+}
+
+/* CONTATO */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+}
+
+input,textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+padding:12px;
+border:none;
+background:#0077ff;
+color:white;
+font-weight:bold;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#005ad1;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:50px;
+background:#111;
+color:white;
+}
+
+</style>
+
 </head>
 
 <body>
-    <header>
-        Pablo
-        <nav>
-            <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Pesquisa</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <h1>Minha pagina</h1>
-        <div id="msg">
-            <p>essa e a minha pagina onde eu vou postar todas as pesquisas proposta nas aulas, e vai servir para mim
-                evoluir no css, html, js</p>
-        </div>
-    </section><br>
+<header>
 
-    <section id="sobre">
-        <h2>Sobre mim</h2>
-        <div id="sobre2" >
-            <div id="card-img">
-                <img src="./c3uhsgo1vx541.jpg" alt="">
-            </div>
-            <div id="sobre-mim">
-                <<p>
-Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. 
-Desde que comecei a programar em 2023, com foco inicial em Python, venho desenvolvendo projetos e estudando constantemente para aprimorar minhas habilidades.
+<div class="logo">Pablo</div>
 
-A programação não é apenas uma atividade técnica para mim, mas um processo constante de resolver problemas, criar soluções e evoluir intelectualmente. 
-Mesmo fora do computador, estou frequentemente pensando em novas ideias, melhorias e desafios que possam fortalecer minha capacidade como desenvolvedor.
+<nav>
+<ul>
+<li><a href="#hero">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#pesquisas">Pesquisas</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
 
-A frase que melhor representa minha mentalidade é:
+</header>
 
+
+<!-- HERO -->
+
+<section id="hero">
+
+<h1>Meu Portfólio</h1>
+
+<p>
+Esta página reúne minhas pesquisas e projetos desenvolvidos durante meus estudos em programação.
+Também serve como um espaço para acompanhar minha evolução em HTML, CSS e JavaScript.
+</p>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+<h2>Sobre mim</h2>
+
+<div class="sobre-container">
+
+<div class="card-img">
+<img src="./c3uhsgo1vx541.jpg">
+</div>
+
+<div class="sobre-texto">
+
+<p>
+Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. Desde que comecei a programar em 2023, inicialmente com Python, venho desenvolvendo projetos e estudando constantemente para aprimorar minhas habilidades.
+</p>
+
+<br>
+
+<p>
+Para mim, programação vai além de escrever código: é resolver problemas, criar soluções e evoluir intelectualmente. Mesmo longe do computador, frequentemente estou pensando em novas ideias, melhorias e desafios que possam fortalecer minhas habilidades como desenvolvedor.
+</p>
+
+<br>
+
+<p>
 <strong>
-"Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. 
-Eu vou procurar, aprender e voltar com a resposta."
+"Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. Eu vou procurar, aprender e voltar com a resposta."
 </strong>
 </p>
-            </div>
-        </div>
-    </section><br>
 
-    <!-- colocar o links das paginas para os resumos das pesquisas  -->
-    <section id="pesquisas">
-        <h2>Pesquisa</h2>
-        <div class="drop">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error dolor aspernatur! Error ad commodi odit
-            explicabo maxime hic sapiente cum accusantium nihil accusamus est dolore, aut, iusto alias nemo.
-        </div>
+</div>
 
-        <div class="drop">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error dolor aspernatur! Error ad commodi odit
-            explicabo maxime hic sapiente cum accusantium nihil accusamus est dolore, aut, iusto alias nemo.
-        </div>
-        <div class="drop">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error dolor aspernatur! Error ad commodi odit
-            explicabo maxime hic sapiente cum accusantium nihil accusamus est dolore, aut, iusto alias nemo.
-        </div>
-    </section><br>
+</div>
 
-    <section id="contato">
-        <div>
-            <form action="" method="get">
-                <label for="">Nome:</label>
-                <input type="text"><br>
-                <label for="">Telefone:</label>
-                <input type="text"><br>
-                <label for="">Email:</label>
-                <input type="text"><br>
-            </form>
-        </div>
-    </section>
+</section>
+
+
+<!-- PESQUISAS -->
+
+<section id="pesquisas">
+
+<h2>Pesquisas</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Ada Lovelace</h3>
+<p>Pioneira da programação e autora do primeiro algoritmo da história.</p>
+<br>
+<a href="ada.html">Ver pesquisa</a>
+</div>
+
+<div class="card">
+<h3>Charles Babbage</h3>
+<p>Criador do conceito da máquina analítica, base dos computadores modernos.</p>
+<br>
+<a href="babbage.html">Ver pesquisa</a>
+</div>
+
+<div class="card">
+<h3>Alan Turing</h3>
+<p>Pai da ciência da computação moderna e criador da máquina de Turing.</p>
+<br>
+<a href="turing.html">Ver pesquisa</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section id="contato">
+
+<h2>Contato</h2>
+
+<form>
+
+<input type="text" placeholder="Seu nome">
+
+<input type="email" placeholder="Seu email">
+
+<textarea rows="5" placeholder="Sua mensagem"></textarea>
+
+<button>Enviar</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Pablo | Portfólio de Programação</p>
+
+</footer>
+
 </body>
-
 </html>
