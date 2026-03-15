@@ -2,327 +2,332 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pablo | Portfólio</title>
+    <title>Pablo | Portfólio</title>
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-html{
-scroll-behavior:smooth;
-}
+        body {
+            background: #f5f5f5;
+            color: #222;
+        }
 
-body{
-background:#f5f5f5;
-color:#222;
-}
+        /* HEADER */
 
-/* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+        }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-position:sticky;
-top:0;
-}
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-.logo{
-font-size:20px;
-font-weight:bold;
-}
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+            transition: .3s;
+        }
 
-nav a{
-text-decoration:none;
-color:#222;
-font-weight:600;
-transition:.3s;
-}
+        nav a:hover {
+            color: #0077ff;
+        }
 
-nav a:hover{
-color:#0077ff;
-}
+        /* HERO */
 
-/* HERO */
+        #hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-#hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
+        #hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
 
-#hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
+        #hero p {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
-#hero p{
-max-width:600px;
-font-size:18px;
-line-height:1.6;
-}
+        /* SEÇÕES */
 
-/* SEÇÕES */
+        section {
+            padding: 80px 10%;
+        }
 
-section{
-padding:80px 10%;
-}
+        h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
 
-h2{
-margin-bottom:30px;
-font-size:32px;
-}
+        /* SOBRE */
 
-/* SOBRE */
+        .sobre-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-.sobre-container{
-display:flex;
-gap:40px;
-align-items:center;
-flex-wrap:wrap;
-}
+        .card-img {
+            width: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
 
-.card-img{
-width:320px;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
+        .card-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
-.card-img img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
+        .sobre-texto {
+            flex: 1;
+            line-height: 1.7;
+            font-size: 17px;
+        }
 
-.sobre-texto{
-flex:1;
-line-height:1.7;
-font-size:17px;
-}
+        /* PESQUISAS */
 
-/* PESQUISAS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: .3s;
+        }
 
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:.3s;
-}
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-.card:hover{
-transform:translateY(-5px);
-}
+        .card a {
+            text-decoration: none;
+            color: #0077ff;
+            font-weight: bold;
+        }
 
-.card a{
-text-decoration:none;
-color:#0077ff;
-font-weight:bold;
-}
+        /* CONTATO */
 
-/* CONTATO */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+        }
 
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:400px;
-}
+        input,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
 
-input,textarea{
-padding:10px;
-border:1px solid #ccc;
-border-radius:6px;
-}
+        button {
+            padding: 12px;
+            border: none;
+            background: #0077ff;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .3s;
+        }
 
-button{
-padding:12px;
-border:none;
-background:#0077ff;
-color:white;
-font-weight:bold;
-border-radius:6px;
-cursor:pointer;
-transition:.3s;
-}
+        button:hover {
+            background: #005ad1;
+        }
 
-button:hover{
-background:#005ad1;
-}
+        /* FOOTER */
 
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-margin-top:50px;
-background:#111;
-color:white;
-}
-
-</style>
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background: #111;
+            color: white;
+        }
+    </style>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<div class="logo">Pablo</div>
+        <div class="logo">Pablo</div>
 
-<nav>
-<ul>
-<li><a href="#hero">Início</a></li>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#pesquisas">Pesquisas</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#pesquisas">Pesquisas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
 
-</header>
-
-
-<!-- HERO -->
-
-<section id="hero">
-
-<h1>Meu Portfólio</h1>
-
-<p>
-Esta página reúne minhas pesquisas e projetos desenvolvidos durante meus estudos em programação.
-Também serve como um espaço para acompanhar minha evolução em HTML, CSS e JavaScript.
-</p>
-
-</section>
+    </header>
 
 
-<!-- SOBRE -->
+    <!-- HERO -->
 
-<section id="sobre">
+    <section id="hero">
 
-<h2>Sobre mim</h2>
+        <h1>Meu Portfólio</h1>
 
-<div class="sobre-container">
+        <p>
+            Esta página reúne minhas pesquisas e projetos desenvolvidos durante meus estudos em programação.
+            Também serve como um espaço para acompanhar minha evolução em HTML, CSS e JavaScript.
+        </p>
 
-<div class="card-img">
-<img src="./c3uhsgo1vx541.jpg">
-</div>
-
-<div class="sobre-texto">
-
-<p>
-Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. Desde que comecei a programar em 2023, inicialmente com Python, venho desenvolvendo projetos e estudando constantemente para aprimorar minhas habilidades.
-</p>
-
-<br>
-
-<p>
-Para mim, programação vai além de escrever código: é resolver problemas, criar soluções e evoluir intelectualmente. Mesmo longe do computador, frequentemente estou pensando em novas ideias, melhorias e desafios que possam fortalecer minhas habilidades como desenvolvedor.
-</p>
-
-<br>
-
-<p>
-<strong>
-"Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. Eu vou procurar, aprender e voltar com a resposta."
-</strong>
-</p>
-
-</div>
-
-</div>
-
-</section>
+    </section>
 
 
-<!-- PESQUISAS -->
+    <!-- SOBRE -->
 
-<section id="pesquisas">
+    <section id="sobre">
 
-<h2>Pesquisas</h2>
+        <h2>Sobre mim</h2>
 
-<div class="cards">
+        <div class="sobre-container">
 
-<div class="card">
-<h3>Ada Lovelace</h3>
-<p>Pioneira da programação e autora do primeiro algoritmo da história.</p>
-<br>
-<a href="ada.html">Ver pesquisa</a>
-</div>
+            <div class="card-img">
+                <img src="./c3uhsgo1vx541.jpg">
+            </div>
 
-<div class="card">
-<h3>Charles Babbage</h3>
-<p>Criador do conceito da máquina analítica, base dos computadores modernos.</p>
-<br>
-<a href="babbage.html">Ver pesquisa</a>
-</div>
+            <div class="sobre-texto">
 
-<div class="card">
-<h3>Alan Turing</h3>
-<p>Pai da ciência da computação moderna e criador da máquina de Turing.</p>
-<br>
-<a href="turing.html">Ver pesquisa</a>
-</div>
+                <p>
+                    Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. Desde que comecei a
+                    programar em 2023, inicialmente com Python, venho desenvolvendo projetos e estudando constantemente
+                    para aprimorar minhas habilidades.
+                </p>
 
-</div>
+                <br>
 
-</section>
+                <p>
+                    Para mim, programação vai além de escrever código: é resolver problemas, criar soluções e evoluir
+                    intelectualmente. Mesmo longe do computador, frequentemente estou pensando em novas ideias,
+                    melhorias e desafios que possam fortalecer minhas habilidades como desenvolvedor.
+                </p>
 
+                <br>
 
-<!-- CONTATO -->
+                <p>
+                    <strong>
+                        "Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. Eu vou
+                        procurar, aprender e voltar com a resposta."
+                    </strong>
+                </p>
 
-<section id="contato">
+            </div>
 
-<h2>Contato</h2>
+        </div>
 
-<form>
-
-<input type="text" placeholder="Seu nome">
-
-<input type="email" placeholder="Seu email">
-
-<textarea rows="5" placeholder="Sua mensagem"></textarea>
-
-<button>Enviar</button>
-
-</form>
-
-</section>
+    </section>
 
 
-<footer>
+    <!-- PESQUISAS -->
 
-<p>© 2026 Pablo | Portfólio de Programação</p>
+    <section id="pesquisas">
 
-</footer>
+        <h2>Pesquisas</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Ada Lovelace</h3>
+                <p>Pioneira da programação e autora do primeiro algoritmo da história.</p>
+                <br>
+                <a href="./ada.html">Ver pesquisa</a>
+            </div>
+
+            <div class="card">
+                <h3>Charles Babbage</h3>
+                <p>Criador do conceito da máquina analítica, base dos computadores modernos.</p>
+                <br>
+                <a href="./babbage.html">Ver pesquisa</a>
+            </div>
+
+            <div class="card">
+                <h3>Alan Turing</h3>
+                <p>Pai da ciência da computação moderna e criador da máquina de Turing.</p>
+                <br>
+                <a href="./turing.html">Ver pesquisa</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato">
+
+        <h2>Contato</h2>
+
+        <form>
+
+            <input type="text" placeholder="Seu nome">
+
+            <input type="email" placeholder="Seu email">
+
+            <textarea rows="5" placeholder="Sua mensagem"></textarea>
+
+            <button>Enviar</button>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 Pablo | Portfólio de Programação</p>
+
+    </footer>
 
 </body>
+
 </html>
