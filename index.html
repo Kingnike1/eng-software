@@ -4,223 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Pablo | Portfólio</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #f5f5f5;
-            color: #222;
-        }
-
-        /* HEADER */
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #222;
-            font-weight: 600;
-            transition: .3s;
-        }
-
-        nav a:hover {
-            color: #0077ff;
-        }
-
-        /* HERO */
-
-        #hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        #hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        #hero p {
-            max-width: 600px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        /* SEÇÕES */
-
-        section {
-            padding: 80px 10%;
-        }
-
-        h2 {
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
-
-        /* SOBRE */
-
-        .sobre-container {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .card-img {
-            width: 320px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-img img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .sobre-texto {
-            flex: 1;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-
-        /* PESQUISAS */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: .3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card a {
-            text-decoration: none;
-            color: #0077ff;
-            font-weight: bold;
-        }
-        
-        .card img{
-            width:100%;
-            height:160px;
-            object-fit:cover;
-            border-radius:8px;
-            margin-bottom:10px;
-            }
-
-            .btn-card{
-            display:inline-block;
-            margin-top:10px;
-            padding:10px 16px;
-            background:#0077ff;
-            color:white;
-            text-decoration:none;
-            border-radius:6px;
-            font-weight:bold;
-            transition:.3s;
-            }
-
-            .btn-card:hover{
-            background:#005ed1;
-            }
-
-        /* CONTATO */
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 400px;
-        }
-
-        input,
-        textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-
-        button {
-            padding: 12px;
-            border: none;
-            background: #0077ff;
-            color: white;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        button:hover {
-            background: #005ad1;
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            background: #111;
-            color: white;
-        }
-    </style>
-
+    <meta name="description" content="Portfólio de Pablo - Desenvolvedor e Estudante de Engenharia de Software">
+    <title>Pablo | Portfólio de Engenharia de Software</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
     <header>
-
-        <div class="logo">Pablo</div>
-
+        <a href="#" class="logo">PABLO.DEV</a>
         <nav>
             <ul>
                 <li><a href="#hero">Início</a></li>
@@ -229,136 +28,105 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-
     </header>
 
-
-    <!-- HERO -->
-
+    <!-- HERO SECTION -->
     <section id="hero">
-
-        <h1>Meu Portfólio</h1>
-
+        <h1>Construindo o Futuro</h1>
         <p>
-            Esta página reúne minhas pesquisas e projetos desenvolvidos durante meus estudos em programação.
-            Também serve como um espaço para acompanhar minha evolução em HTML, CSS e JavaScript.
+            Bem-vindo ao meu espaço digital. Sou estudante de Engenharia de Software, 
+            apaixonado por transformar ideias em código e explorar a história da computação.
         </p>
-
     </section>
 
-
-    <!-- SOBRE -->
-
+    <!-- SOBRE SECTION -->
     <section id="sobre">
-
-        <h2>Sobre mim</h2>
-
+        <h2>Sobre Mim</h2>
         <div class="sobre-container">
-
             <div class="card-img">
-                <img src="./c3uhsgo1vx541.jpg">
+                <img src="c3uhsgo1vx541.jpg" alt="Foto de Pablo">
             </div>
-
             <div class="sobre-texto">
-
                 <p>
-                    Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. Desde que comecei a
-                    programar em 2023, inicialmente com Python, venho desenvolvendo projetos e estudando constantemente
-                    para aprimorar minhas habilidades.
+                    Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. Desde que iniciei minha jornada em 2023, venho me dedicando a dominar as ferramentas que moldam o mundo digital.
                 </p>
-
-                <br>
-
                 <p>
-                    Para mim, programação vai além de escrever código: é resolver problemas, criar soluções e evoluir
-                    intelectualmente. Mesmo longe do computador, frequentemente estou pensando em novas ideias,
-                    melhorias e desafios que possam fortalecer minhas habilidades como desenvolvedor.
+                    Para mim, programação vai além de escrever código: é resolver problemas complexos, criar soluções inovadoras e evoluir intelectualmente a cada desafio superado.
                 </p>
-
-                <br>
-
-                <p>
-                    <strong>
-                        "Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. Eu vou
-                        procurar, aprender e voltar com a resposta."
-                    </strong>
-                </p>
-
+                <blockquote>
+                    "Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. Eu vou procurar, aprender e voltar com a resposta."
+                </blockquote>
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- PESQUISAS -->
-
+    <!-- PESQUISAS SECTION -->
     <section id="pesquisas">
-
-        <h2>Pesquisas</h2>
-
+        <h2>Pesquisas Acadêmicas</h2>
         <div class="cards">
-
+            <!-- Ada Lovelace -->
             <div class="card">
-                <h3>Ada Lovelace</h3>
-                <img src="ada-love.webp" alt="">
-                <p>Pioneira da programação e autora do primeiro algoritmo da história.<br>
-                Pesquisar feita referente a aula de <strong>Fundamentos da Eng.Software.</strong></p>
-                <br>
-                <a href="./pesquisa/ada.html">Ver pesquisa</a>
+                <img src="ada-love.webp" alt="Ada Lovelace">
+                <div class="card-content">
+                    <h3>Ada Lovelace</h3>
+                    <p>Pioneira da programação e autora do primeiro algoritmo da história. Pesquisa realizada para a disciplina de Fundamentos da Eng. Software.</p>
+                    <a href="pesquisa/ada.html" class="btn-card">Ler Pesquisa</a>
+                </div>
             </div>
 
+            <!-- Charles Babbage -->
             <div class="card">
-                <h3>Charles Babbage</h3>
-                <img src="charles.webp" alt="">
-                <p>Criador do conceito da máquina analítica, base dos computadores modernos.<br>
-                Pesquisar feita referente a aula de <strong>Fundamentos da Eng.Software.</strong></p>
-                <br>
-                <a href="./pesquisa/babbage.html">Ver pesquisa</a>
+                <img src="charles.webp" alt="Charles Babbage">
+                <div class="card-content">
+                    <h3>Charles Babbage</h3>
+                    <p>Criador do conceito da máquina analítica, a base teórica para os computadores modernos e o processamento de dados.</p>
+                    <a href="pesquisa/babbage.html" class="btn-card">Ler Pesquisa</a>
+                </div>
             </div>
 
+            <!-- Alan Turing -->
             <div class="card">
-                <h3>Alan Turing</h3>
-                <img src="alan.webp" alt="">
-                <p>Pai da ciência da computação moderna e criador da máquina de Turing. <br>
-                Pesquisar feita referente a aula de <strong>Fundamentos da Eng.Software.</strong>
-                </p>
-                <br>
-                <a href="./pesquisa/turing.html">Ver pesquisa</a>
+                <img src="alan.webp" alt="Alan Turing">
+                <div class="card-content">
+                    <h3>Alan Turing</h3>
+                    <p>O pai da ciência da computação moderna, cujas contribuições foram fundamentais para a quebra de códigos e a inteligência artificial.</p>
+                    <a href="pesquisa/turing.html" class="btn-card">Ler Pesquisa</a>
+                </div>
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- CONTATO -->
-
+    <!-- CONTATO SECTION -->
     <section id="contato">
-
-        <h2>Contato</h2>
-
-        <form>
-
-            <input type="text" placeholder="Seu nome">
-
-            <input type="email" placeholder="Seu email">
-
-            <textarea rows="5" placeholder="Sua mensagem"></textarea>
-
-            <button>Enviar</button>
-
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Como posso ajudar?" required></textarea>
+            </div>
+            <button type="submit">Enviar Mensagem</button>
         </form>
-
     </section>
-
 
     <footer>
-
-        <p>© 2026 Pablo | Portfólio de Programação</p>
-
+        <div class="footer-content">
+            <p><strong>Pablo</strong> | Estudante de Engenharia de Software</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pablo. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
