@@ -132,6 +132,6 @@ dist
 ./index.js
 ./packages.json
 ./packages-lock.json
-aleatoriamente.txt
+*.txt
 Dockerfile
 docker-compose.yml
