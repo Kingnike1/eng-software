@@ -7,7 +7,28 @@
 
     <title>Pablo | Portfólio</title>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
+        :root {
+            --bg: #f5f5f5;
+            --text: #222;
+            --header: white;
+            --hover: #0077ff;
+            --input: #ccc;
+            --footer: #111;
+        }
+
+        .dark-mode {
+            --bg: #1c1c1c;
+            --text: #f5f5f5;
+            --header: #111;
+            --hover: #4aa3ff;
+            --input: #555;
+            --footer: #000;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,8 +41,8 @@
         }
 
         body {
-            background: #f5f5f5;
-            color: #222;
+            background: var(--bg);
+            color: var(--text);
         }
 
         /* HEADER */
@@ -31,7 +52,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background: white;
+            background: var(--header);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
@@ -46,17 +67,27 @@
             display: flex;
             gap: 30px;
             list-style: none;
+            align-items: center;
         }
 
         nav a {
             text-decoration: none;
-            color: #222;
+            color: var(--text);
             font-weight: 600;
             transition: .3s;
         }
 
         nav a:hover {
-            color: #0077ff;
+            color: var(--hover);
+        }
+
+        .dark-btn {
+            padding: 6px 10px;
+            border: none;
+            background: var(--hover);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
         }
 
         /* HERO */
@@ -130,7 +161,7 @@
         }
 
         .card {
-            background: white;
+            background: var(--header);
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -143,33 +174,17 @@
 
         .card a {
             text-decoration: none;
-            color: #0077ff;
+            color: var(--hover);
             font-weight: bold;
         }
-        
-        .card img{
-            width:100%;
-            height:160px;
-            object-fit:cover;
-            border-radius:8px;
-            margin-bottom:10px;
-            }
 
-            .btn-card{
-            display:inline-block;
-            margin-top:10px;
-            padding:10px 16px;
-            background:#0077ff;
-            color:white;
-            text-decoration:none;
-            border-radius:6px;
-            font-weight:bold;
-            transition:.3s;
-            }
-
-            .btn-card:hover{
-            background:#005ed1;
-            }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
 
         /* CONTATO */
 
@@ -183,14 +198,14 @@
         input,
         textarea {
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid var(--input);
             border-radius: 6px;
         }
 
         button {
             padding: 12px;
             border: none;
-            background: #0077ff;
+            background: var(--hover);
             color: white;
             font-weight: bold;
             border-radius: 6px;
@@ -208,11 +223,21 @@
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-            background: #111;
+            background: var(--footer);
             color: white;
         }
-    </style>
 
+        footer a {
+            margin: 0 10px;
+            font-size: 22px;
+            color: white;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: var(--hover);
+        }
+    </style>
 </head>
 
 <body>
@@ -223,10 +248,18 @@
 
         <nav>
             <ul>
+
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#pesquisas">Pesquisas</a></li>
                 <li><a href="#contato">Contato</a></li>
+
+                <li>
+                    <button class="dark-btn" onclick="toggleDarkMode()">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+
             </ul>
         </nav>
 
@@ -262,25 +295,24 @@
             <div class="sobre-texto">
 
                 <p>
-                    Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo. Desde que comecei a
-                    programar em 2023, inicialmente com Python, venho desenvolvendo projetos e estudando constantemente
-                    para aprimorar minhas habilidades.
+                    Sou um desenvolvedor movido pela curiosidade e pelo aprendizado contínuo.
+                    Desde que comecei a programar em 2023, inicialmente com Python, venho desenvolvendo projetos e
+                    estudando constantemente para aprimorar minhas habilidades.
                 </p>
 
                 <br>
 
                 <p>
                     Para mim, programação vai além de escrever código: é resolver problemas, criar soluções e evoluir
-                    intelectualmente. Mesmo longe do computador, frequentemente estou pensando em novas ideias,
-                    melhorias e desafios que possam fortalecer minhas habilidades como desenvolvedor.
+                    intelectualmente.
                 </p>
 
                 <br>
 
                 <p>
                     <strong>
-                        "Se você me perguntar algo e eu não souber responder, não direi apenas que não sei. Eu vou
-                        procurar, aprender e voltar com a resposta."
+                        "Se você me perguntar algo e eu não souber responder, eu vou procurar, aprender e voltar com a
+                        resposta."
                     </strong>
                 </p>
 
@@ -301,29 +333,22 @@
 
             <div class="card">
                 <h3>Ada Lovelace</h3>
-                <img src="ada-love.webp" alt="">
-                <p>Pioneira da programação e autora do primeiro algoritmo da história.<br>
-                Pesquisar feita referente a aula de <strong>Fundamentos da Eng.Software.</strong></p>
-                <br>
+                <img src="ada-love.webp">
+                <p>Pioneira da programação e autora do primeiro algoritmo da história.</p>
                 <a href="./pesquisa/ada.html">Ver pesquisa</a>
             </div>
 
             <div class="card">
                 <h3>Charles Babbage</h3>
-                <img src="charles.webp" alt="">
-                <p>Criador do conceito da máquina analítica, base dos computadores modernos.<br>
-                Pesquisar feita referente a aula de <strong>Fundamentos da Eng.Software.</strong></p>
-                <br>
+                <img src="charles.webp">
+                <p>Criador do conceito da máquina analítica.</p>
                 <a href="./pesquisa/babbage.html">Ver pesquisa</a>
             </div>
 
             <div class="card">
                 <h3>Alan Turing</h3>
-                <img src="alan.webp" alt="">
-                <p>Pai da ciência da computação moderna e criador da máquina de Turing. <br>
-                Pesquisar feita referente a aula de <strong>Fundamentos da Eng.Software.</strong>
-                </p>
-                <br>
+                <img src="alan.webp">
+                <p>Pai da ciência da computação moderna.</p>
                 <a href="./pesquisa/turing.html">Ver pesquisa</a>
             </div>
 
@@ -357,7 +382,29 @@
 
         <p>© 2026 Pablo | Portfólio de Programação</p>
 
+        <br>
+
+        <a href="https://instagram.com/pabloalmeidathe1" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://github.com/Kingnike1" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://wa.me/5562993293028" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
     </footer>
+
+    <script>
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode")
+        }
+
+    </script>
 
 </body>
 
